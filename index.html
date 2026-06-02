@@ -6,72 +6,157 @@
 <title>دنیای آسانسور مشفق</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:tahoma;
-background:#07121f;
+}
+
+body{
+background:#07111d;
 color:white;
+line-height:1.8;
 }
 
 header{
-padding:25px;
-text-align:center;
-background:#0d1b2a;
-border-bottom:2px solid gold;
+position:sticky;
+top:0;
+background:rgba(7,17,29,.95);
+backdrop-filter:blur(10px);
+padding:20px;
+border-bottom:1px solid rgba(255,215,0,.3);
+z-index:999;
 }
 
-header h1{
-margin:0;
+.logo{
+font-size:28px;
+font-weight:bold;
 color:gold;
+text-align:center;
 }
 
 .hero{
-padding:60px 20px;
+padding:90px 20px;
 text-align:center;
+background:linear-gradient(180deg,#07111d,#0f2238);
 }
 
-.hero h2{
-font-size:32px;
+.hero h1{
+font-size:42px;
 margin-bottom:15px;
+color:gold;
+animation:fadeUp 1s ease;
 }
 
 .hero p{
-color:#ccc;
+max-width:700px;
+margin:auto;
+color:#d7d7d7;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
+margin-top:25px;
+padding:14px 30px;
 background:gold;
 color:black;
 text-decoration:none;
-border-radius:8px;
 font-weight:bold;
+border-radius:10px;
+transition:.3s;
 }
 
-.products{
-padding:30px 20px;
+.btn:hover{
+transform:translateY(-3px);
 }
 
-.products h3{
+.section{
+padding:70px 20px;
+}
+
+.section-title{
 text-align:center;
+font-size:30px;
 color:gold;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
 }
 
 .card{
 background:#10233b;
-padding:20px;
-margin:15px 0;
-border-radius:12px;
-border:1px solid rgba(255,215,0,.3);
+padding:25px;
+border-radius:18px;
+border:1px solid rgba(255,215,0,.15);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:gold;
+}
+
+.card h3{
+color:gold;
+margin-bottom:10px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.feature{
+background:#10233b;
+padding:25px;
+border-radius:18px;
+text-align:center;
+}
+
+.contact{
+text-align:center;
+background:#0f2238;
+padding:70px 20px;
+}
+
+.phone{
+font-size:24px;
+font-weight:bold;
+color:gold;
+margin:10px 0;
+}
+
+.address{
+margin-top:20px;
+color:#ddd;
 }
 
 footer{
 text-align:center;
 padding:25px;
-margin-top:40px;
-background:#0d1b2a;
+background:#050b13;
+color:#bbb;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 </style>
 
@@ -80,41 +165,132 @@ background:#0d1b2a;
 <body>
 
 <header>
-<h1>دنیای آسانسور مشفق</h1>
+<div class="logo">
+دنیای آسانسور مشفق
+</div>
 </header>
 
 <section class="hero">
-<h2>تامین تخصصی قطعات آسانسور</h2>
-<p>عرضه انواع موتور، تابلو فرمان، ریل، سیم بکسل و تجهیزات آسانسور</p>
+<h1>تأمین تخصصی قطعات آسانسور</h1>
 
-<a href="#" class="btn">
-مشاهده محصولات
+<p>
+عرضه انواع موتور آسانسور، تابلو فرمان، ریل، سیم بکسل، درب آسانسور و تجهیزات تخصصی با کیفیت بالا و مشاوره فنی.
+</p>
+
+<a href="#contact" class="btn">
+تماس با ما
 </a>
 </section>
 
-<section class="products">
+<section class="section">
 
-<h3>محصولات اصلی</h3>
+<h2 class="section-title">
+محصولات اصلی
+</h2>
+
+<div class="cards">
 
 <div class="card">
-<h4>موتور آسانسور</h4>
-<p>انواع موتورهای کششی و گیربکس</p>
+<h3>موتور آسانسور</h3>
+<p>
+انواع موتورهای گیربکس و گیرلس با کیفیت بالا.
+</p>
 </div>
 
 <div class="card">
-<h4>تابلو فرمان</h4>
-<p>تابلوهای مدرن و هوشمند آسانسور</p>
+<h3>تابلو فرمان</h3>
+<p>
+تابلوهای هوشمند و مدرن مناسب پروژه‌های مختلف.
+</p>
 </div>
 
 <div class="card">
-<h4>ریل و سیم بکسل</h4>
-<p>تجهیزات استاندارد و باکیفیت</p>
+<h3>درب آسانسور</h3>
+<p>
+درب‌های اتوماتیک و نیمه اتوماتیک.
+</p>
+</div>
+
+<div class="card">
+<h3>ریل آسانسور</h3>
+<p>
+ریل‌های استاندارد با دوام و دقت بالا.
+</p>
+</div>
+
+<div class="card">
+<h3>سیم بکسل</h3>
+<p>
+انواع سیم بکسل مناسب آسانسورهای مسکونی و تجاری.
+</p>
+</div>
+
+<div class="card">
+<h3>قطعات جانبی</h3>
+<p>
+شستی، نمایشگر، کفشک و سایر تجهیزات آسانسور.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+چرا دنیای آسانسور مشفق؟
+</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>کیفیت بالا</h3>
+<p>
+تأمین قطعات استاندارد و مطمئن.
+</p>
+</div>
+
+<div class="feature">
+<h3>مشاوره تخصصی</h3>
+<p>
+راهنمایی فنی برای انتخاب بهترین قطعات.
+</p>
+</div>
+
+<div class="feature">
+<h3>پشتیبانی مشتریان</h3>
+<p>
+پاسخگویی سریع و پیگیری سفارشات.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">
+تماس با ما
+</h2>
+
+<div class="phone">
+09121381339
+</div>
+
+<div class="phone">
+09123591564
+</div>
+
+<div class="address">
+تهران، منطقه ۹، میدان فتح، جنب پایگاه یکم شکاری
 </div>
 
 </section>
 
 <footer>
-دنیای آسانسور مشفق
+© دنیای آسانسور مشفق
 </footer>
 
 </body>
